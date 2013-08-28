@@ -1,0 +1,10 @@
+<div class="container">
+  <h1> <%= @category.name %> </h1>
+  <p> <a href="/create">create a new post</p>
+
+  <table>
+   <% @posts.each do |post| %>
+   <tr> <td> <a href="/post/<%=post.id%>"><%=post.title %> <br></td></tr>
+   <% end %>
+  </table>
+</div>

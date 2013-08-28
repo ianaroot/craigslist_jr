@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p> <a href="/create">create a new post</p>
+
+  <table>
+    
+    <% @categories.each do |cat| %>
+    <tr> <td> <a href="/category/<%= cat.url %>"> <%=cat.name %>   <br></td></tr>
+    <% end %>
+
+  </table>
+</div>

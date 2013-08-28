@@ -1,0 +1,90 @@
+<div class="container">
+ <h1> Your post currently looks like this</h1>
+  <table>
+    <tr>
+      <td>
+        <p>category: <%= @category.name %></p>
+      </tr>
+    </td>
+    <tr>
+
+      <td>
+        title: <%= @post.title %>
+      </tr>
+    </td>
+
+    <tr>
+      <td>
+        <p>$<%= @post.price %></p>
+      </tr>
+    </td>
+
+    <tr>
+      <td>
+        <%= @post.content %>
+      </tr>
+    </td>
+    
+    <tr>
+      <td>
+        <p>email: <%= @post.email %></p>
+      </tr>
+    </td>
+
+    
+    <tr>
+      <td>
+        <p><strong>please note that you will have to refill all fields for your post to save properly</strong></p>
+      </tr>
+    </td>
+
+    <tr>
+      <td>
+        <form action="/posts/edit/<%= @post.url  %>" method="post">
+          <p>which category would you like to post to?</p>
+          <input type="radio" name="category_id" value=1> Tickets<br>
+          <input type="radio" name="category_id" value=2> Electronics<br>
+          <input type="radio" name="category_id" value=3 > Cars<br>
+          <input type="radio" name="category_id" value=4> Boats<br>
+          <input type="radio" name="category_id" value=5> Used Handkerchiefs<br>
+          <input type="radio" name="category_id" value=6> Llama Adoption<br><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>please enter a title for your post</p>
+        <input type="text" name="title">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>what is the price of your item?</p>
+        <input type="text" name="price">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+          <p>please give a brief description of the item</p>
+          <textarea cols="40" rows="5" name="content">
+          </textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>please enter an email address where you can be reached</p>
+        <input type="text" name="email">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <br>
+        <input type="submit" value="save changes">
+      </td>
+    </tr>
+  </table>
+</div>
